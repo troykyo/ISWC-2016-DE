@@ -53,7 +53,7 @@
 \author{%
   \alignauthor{%
     \textbf{Troy Nachtigall}\\
-    \affaddr{Eindhoven University of Technology} \\
+    \affaddr{Eindhoven Univsersity of Technology} \\
     \affaddr{Eindhoven,  5400MB, NL} \\
     \email{t.r.nachtigall@tue.nl} }
     \alignauthor{%
@@ -101,29 +101,9 @@
   principle, the method only requires a software modification so there are no
   additional costs for materials and the feature could be made available to
   existing products with a software update.   This textile is a prime example the design research into wearable technology of Troy Nachtigall coming together with the particular capacitive engineering expertise of Admar Schoonen. Together they create a new smart textile with multi functionalities that sense presence and Pressure.  
-\end{abstract}
+\end{abstract} 
 
-\marginpar{%
-  \vspace{-45pt} \fbox{%
-    \begin{minipage}{0.925\marginparwidth}
-      \textbf{Good Utilization of the Side Bar} \\
-      \vspace{1pc} \textbf{Preparation:} Do not change the margin
-      dimensions and do not flow the margin text to the
-      next page. \\
-      \vspace{1pc} \textbf{Materials:} The margin box must not intrude
-      or overflow into the header or the footer, or the gutter space
-      between the margin paragraph and the main left column. The text
-      in this text box should remain the same size as the body
-      text. Use the \texttt{{\textbackslash}vspace{}} command to set
-      the margin
-      note's position. \\
-      \vspace{1pc} \textbf{Images \& Figures:} Practically anything
-      can be put in the margin if it fits. Use the
-      \texttt{{\textbackslash}marginparwidth} constant to set the
-      width of the figure, table, minipage, or whatever you are trying
-      to fit in this skinny space.
-    \end{minipage}}\label{sec:sidebar} }
-    
+
     
 \keywords{\plainkeywords}
 \category{H.5.2.Information Interfaces and Presentation, 
@@ -133,8 +113,8 @@
 
 \section{Introduction}
 Troy Nachtigall is a Wearable Technology expert currently exploring programming materials as a Marie Sladowska Curie research fellow in the ArcInTexETN Horizon 2020 project where he explores the relationship of adaptive and responsive wearables between the scales of the individual, the room and architecture. Engineer Admar Schoonen is an expert in capacitive technologies with many past projects in capacitive touch sensing.  He is a member of the TU/Eindhoven Industrial Design /dSearch labs exploring design research from an engineering perspective.  PrePre presents a design collaboration between Troy and Admar that created an e-textile and code that can sense pressure and intimate presence on as many as four sensors simutaniously.  This collaborative process was selected for a pair of workshops for the Ultra Personalized Smart Textiles (UPST) project at the University of Technology at Eindhoven in part as an ambasodor action of the ArcInTexETN Horizon 2020 project (www.ArcInTexETN.eu). These workshops allowed the exploration of touch and presence technologies with interaction designers where new frontiers of sensing and actuating were explored.  
-\section{PrePre 2015}
-
+\section{PrePre 2016}
+The capability of sensing not only when someone is pressing against a textile, but when they are approaching the textile adds new dimensions to interaction and the design of those interactions.  While the sensor can be made with nearly conductive, semi conductive and insulator materials, the sensor in intended for on the body and near the body uses where softness and tactility are highly valued.  After several expiriments 
 \section{Novelty}
 
 \section{Relevancy}
@@ -210,6 +190,8 @@ method makes it more difficult to filter out these disturbances, leading to poor
 performance of the sensor and poor experiences of capacitive touch for users of
 the objects which use this method.
 
+
+
 \subsubsection{CVD Method}
 Another well-known method for self-capacitance does not rely on R-C charge times
 but instead relies on a microcontroller with a multiplexed Analog to Digital
@@ -217,6 +199,26 @@ Converter (ADC), the sample-and-hold capacitor ($\textrm{C}_{\textrm{S\&H}}$)
 inside this ADC and the ability of the microcontroller to dynamically
 reconfigure its analog input pins to digital output pins. This method is called
 Capacitive Voltage Division (CVD).
+
+\begin{marginfigure}
+\begin{minipage}{\marginparwidth}
+\centering
+\includegraphics[width=0.9\columnwidth]{figures/cap_res_setup_res}
+\caption{Resistive pressure sensor used in capacitive and resistive setup in
+resistive sensing mode. Grey items are internal to the
+microcontroller.}~\label{fig:cap_res_setup_res}
+\end{minipage}
+\end{marginfigure}
+
+\begin{marginfigure}
+\begin{minipage}{\marginparwidth}
+\centering
+\includegraphics[width=0.9\columnwidth]{figures/cap_res_setup_cap}
+\caption{Resistive pressure sensor used in capacitive and resistive setup in
+capacitive sensing mode. Grey items are internal to the
+microcontroller.}~\label{fig:cap_res_setup_cap}
+\end{minipage}
+\end{marginfigure}
 
 In this method, no external resistor is required and the sensor plate is
 directly connected to an analog input pin. The microcontroller starts a
@@ -257,22 +259,6 @@ resistor is not used and the to electrode of the pressure sensor is only
 connected to the analog input. The bottom electrode is connected to a pin that
 is configured as digital input, which effectively means that the sensor is
 floating. This is exactly the setup that is needed for the CVD method.
-
-\begin{figure}[!htbp]
-\centering
-  \includegraphics[width=0.9\columnwidth]{figures/cap_res_setup_res}
-  \caption{Resistive pressure sensor used in capacitive and resistive setup in
-resistive sensing mode. Grey items are internal to the
-microcontroller.}~\label{fig:cap_res_setup_res}
-\end{figure}
-
-\begin{figure}[!htbp]
-\centering
-  \includegraphics[width=0.9\columnwidth]{figures/cap_res_setup_cap}
-  \caption{Resistive pressure sensor used in capacitive and resistive setup in
-capacitive sensing mode. Grey items are internal to the
-microcontroller.}~\label{fig:cap_res_setup_cap}
-\end{figure}
 
 \section{Software Features}
 In many cases both resistive pressure sensing and capacitive presence sensing
