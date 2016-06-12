@@ -43,7 +43,7 @@
 
 \title{PrePre: Presence and Pressure Sensing}
 
-\numberofauthors{6}
+\numberofauthors{2}
 % Notice how author names are alternately typesetted to appear ordered
 % in 2-column format; i.e., the first 4 autors on the first column and
 % the other 4 auhors on the second column. Actually, it's up to you to
@@ -111,6 +111,9 @@
 
 
 \section{Introduction}
+There are many challenges facing wearables in terms of the creation of effective smart wearables \cite{oscar} and embodied services \cite{martijn}when these are applied to the body.  
+
+PrePre demonstrates a method to add presence sensing to pressure sensors, allowing to detect the presence of humans before they touch the pressure sensor. This allows for novel interfaces that guide users even before they deliberately use and interact with the object. In principle, the method only requires a software modification so there are no additional costs for materials and the feature could be made available to existing products with a software update. This textile is a prime example of how design research into wearable technology together with the engineering expertise on in this case capacitive sensing can create a new smart textiles with multi-functional capabilities like presence and pressure. 
 \begin{marginfigure}
 \begin{minipage}{\marginparwidth}
 \centering
@@ -118,10 +121,7 @@
  \caption{PrePre workshop testing materials and configurations at the TU/e E-Lab.}~\label{fig:workshop}
 \end{minipage}
 \end{marginfigure}
-
-PrePre demonstrates a method to add presence sensing to pressure sensors, allowing to detect the presence of humans before they touch the pressure sensor. This allows for novel interfaces that guide users even before they deliberately use and interact with the object. In principle, the method only requires a software modification so there are no additional costs for materials and the feature could be made available to existing products with a software update. This textile is a prime example of how design research into wearable technology together with the engineering expertise on in this case capacitive sensing can create a new smart textiles with multi-functional capabilities like presence and pressure. PrePre presents a design collaboration between /d.search labs and Wearable Senses lab at TU/e Industrial Design to create an e-textile and its supporting code to sense pressure and presence on as many as four sensors simultaneously. 
-
-This collaborative process was selected for a pair of workshops at the Ultra Personalized Smart Textiles (UPST) project at the University of Technology at Eindhoven in part as an ambassador action of the ArcInTexETN Horizon 2020 project\footnote{\url{http://www.ArcInTexETN.eu}}. These workshops explored iterations of touch and presence technologies with interaction designers where new frontiers of sensing and actuating were explored.  
+PrePre presents a design collaboration between /d.search labs and Wearable Senses lab at TU/e Industrial Design to create an e-textile and its supporting code to sense pressure and presence on as many as four sensors simultaneously. This collaborative process was selected for a pair of workshops at the Ultra Personalized Smart Textiles (UPST) project at the University of Technology at Eindhoven in part as an ambassador action of the ArcInTexETN Horizon 2020 project\footnote{\url{http://www.ArcInTexETN.eu}}. These workshops explored iterations of touch and presence technologies with interaction designers where new frontiers of sensing and actuating were explored.  
 
 \section{Design}
 The capability of sensing doesn?t need to be reduced to pressing against a textile. Knowing about when someone is approaching a textile can add new possibilities on how to interact with it and new dimensions to the design of those interactions. A sensor made with conductive, resistive and insulating materials  intended for ?on the body? uses could also be applied for ?near the body? uses where softness and tactility are highly valued product features.
@@ -213,12 +213,10 @@ but instead relies on charge distribution between the sample and hold capacitor
 of an ADC ($\textrm{C}_{\textrm{S\&H}}$) and the capacitive sensor. Davison \cite{Davison2013a} gives a
 good overview of this method.
 
-Here, no external resistor is required and the sensor plate is
-directly connected to an analog input pin. The microcontroller unit (MCU) starts a
+CVD does not require any external resistor and the sensor plate is directly connected to an analog input pin.  The microcontroller unit (MCU) starts a
 measurement by configuring this pin as a digital output and making this output low,
 thereby discharging the sensor. Next, the MCU connects the 
 ADC to its supply voltage, which charges $\textrm{C}_{\textrm{S\&H}}$.
-
 Then the sensor pin needs to be reconfigured as analog input and the
 multiplexer of the ADC needs to be switched to this input. This will
 redistribute the charge on $\textrm{C}_{\textrm{S\&H}}$ over both
@@ -236,14 +234,10 @@ The CVD method connects the sensor directly to the analog input of a
 MCU, similar to the resistive sensor setup. The resistive sensor can
 now be used to also measure capacitance by connecting the other electrode of the
 sensor to a GPIO pin instead of ground. This setup is shown in Figures
-\ref{fig:cap_res_setup_res} and \ref{fig:cap_res_setup_cap}.
-
-Figure \ref{fig:cap_res_setup_res} shows the setup in resistive sensing mode,
-which is a standard resitive divider setup using an internal pull resistor
+\ref{fig:cap_res_setup_res} and \ref{fig:cap_res_setup_cap}. Figure \ref{fig:cap_res_setup_res} shows the setup in resistive sensing mode,
+which is a standard resistive divider setup using an internal pull resistor
 as reference resistor and a digital output pin as ground to complete the
-circuit.
-
-Figure \ref{fig:cap_res_setup_cap} shows the same circuit but with the GPIO pins
+circuit. Figure \ref{fig:cap_res_setup_cap} shows the same circuit but with the GPIO pins
 reconfigured for capacitive sensing. In this setup, the internal pull up
 resistor is not used and the top electrode of the pressure sensor is only
 connected to the analog input. The bottom electrode is connected to a pin 
@@ -252,15 +246,10 @@ floating, which is exactly the setup that is needed for the CVD method.
 
 Modern MCUs have fast ADCs (typically 1 MHz or more), allowing it to rapidly switch between
 resistive and capacitive sensing modes, using the same sensor for both
-resisitive pressure and capacitive presence sensing.
+resistive pressure and capacitive presence sensing.
 
 \section{Software Features}
-In many resistive pressure sensing or capacitive presence sensing
-applications relative measurements are sufficient. In such cases, a state
-machine which tracks any background variations on the signal is a simple
-and effective method to reduce noise. In our case, both the resistive
-and capacitive signals use the following state machine where
-each signal has its own instance and parameter settings.
+In many resistive pressure sensing or capacitive presence sensing applications relative measurements are sufficient. In such cases, a state machine which tracks any background variations on the signal is a simple and effective method to reduce noise. In our case, both the resistive and capacitive signals use the following state machine where each signal has its own instance and parameter settings. 
 
 Similar to the state machine described by Bohn \cite{Bohn2009}, the state
 machine for each sensor can be in five states: Calibrating, Released, Released
@@ -288,13 +277,7 @@ background variations.}~\label{fig:state_machine}
 % \end{marginfigure}
 
 Similarly the state moves from the Pressed state to the Pressed to Released
-state and from Pressed to Released to the Released state.
-
-To account for stuck buttons (for example: when the user unintentionally placed
-a large conductive object very close to the capacitive touch sensor), there is a
-maximum time that the sensor can be in the Pressed state. After this time the
-state is changed to the Calibrating state and the sensor will start
-recalibrating.
+state and from Pressed to Released to the Released state. This is shown in Figure \ref{fig:state_machine}.
 
 By changing parameters $N$, $C$, $P$ and $R$ the amount of filtering and
 speed of detection can be tuned to the application. Once tuned
@@ -341,25 +324,8 @@ sensor.}~\label{fig:shield_circuit}
 
 
 \section{Conclusion}
-The possibilities of a reliable, textile, soft presence and pressure sensor are
-numerous.  This reliability was detailed in the combination of capacitive
-distance sensing using the CVD method for presence sensing with resistive
-sensing for pressure
-sensing. The robustness of the CVD method as well as the required circuit and
-MCU features make it ideal to combine with existing resistive
-pressure sensing applications to enhance the user experience by not only sensing
-how hard a user presses on a button but already giving feedback to the user when
-approaching the button. The choice of textiles increases the reliability and
-performance of the sensor in their specific contexts. In the use of shoes we
-measure not only how hard the foot is being pressed, but if and how far the foot is
-disconnecting from the shoe.  In garments we can understand how multiple people
-approach and touch each other in performance or everyday activities. In the
-context of an automative steering wheel we can understand not only where someone
-is touching, but how they move their hands when engaged in an maneuver such as
-turning a corner.
- Using multiple sensors for greater movement vector and specific specific
-touch location sensing is a serious possibility that the authors intend to
-explore further.  
+The possibilities of a reliable, textile, soft presence and pressure sensor are numerous. This reliability was detailed in the combination of capacitive distance sensing using the CVD method for presence sensing with resistive sensing for pressure sensing. The robustness of the CVD method as well as the required circuit and MCU features make it ideal to combine with existing resistive pressure sensing applications to enhance the user experience by not only sensing how hard a user presses on a button but already giving feedback to the user when approaching the button. The choice of textiles increases the reliability and performance of the sensor in their specific contexts. In the use of shoes we measure not only how hard the foot is being pressed, but if and how far the foot is disconnecting from the shoe. In garments we can understand how multiple people approach and touch each other in performance or everyday activities. 
+In the context of an automative steering wheel we can understand not only where someone is touching, but how they move their hands when engaged in an maneuver such as turning a corner. Using multiple sensors for greater movement vector and specific specific touch location sensing is a serious possibility that the authors intend to explore further. 
 
 \section{Acknowledgements}
 The authors would like to thank the Wearable Senses Lab, /dSearch Lab and E-Labs
