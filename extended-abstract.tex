@@ -194,11 +194,11 @@ There are many different methods to measure
 self-capacitance, two of those will be briefly discussed here.
 
 \subsubsection{R-C Charge Method}
-A very popular method in the Do It Yourself (DIY) community is the R-C charge
+A very popular method in the Arduino community is the R-C charge
 method. In this method the charge and discharge times of a resistor-capacitor
 combination is measured. Since the resistor is fixed value, this is a measure
-for the value of the capacitor. A detailed description can be found in FIXME:
-ADD REFERENCE 
+for the value of the capacitor. A detailed description can be found in
+\cite{ST2009}.
 
 An intrinsic feature of capacitive touch sensors is that the
 electric field needs to fringe out of the object to be able to sense the human
@@ -215,7 +215,8 @@ the objects which use this method.
 Another well-known method for self-capacitance does not rely on R-C charge times
 but instead relies on charge distribution between the sample and hold capacitor
 of an ADC ($\textrm{C}_{\textrm{S\&H}}$) and the capacitive sensor. This method
-is called Capacitive Voltage Division (CVD).
+is called Capacitive Voltage Division (CVD). Davison \cite{Davison2013a} gives a
+good overview of this method.
 
 In this method, no external resistor is required and the sensor plate is
 directly connected to an analog input pin. The microcontroller starts a
@@ -290,9 +291,10 @@ and effective method to reduce noise. In our case, both the resistive sensor
 signals and the capacitive sensor signals use the following state machine where
 each signal has its own instance and its own parameter settings.
 
-The state machine for each sensor can be in five states: Calibrating, Released,
-Released to Pressed, Pressed and Pressed to Released.
-This is shown in Figure \ref{fig:state_machine}.
+Similar to the state machine described by Bohn \cite{Bohn2009}, the state
+machine for each sensor can be in five states: Calibrating, Released, Released
+to Pressed, Pressed and Pressed to Released. This is shown in Figure
+\ref{fig:state_machine}.
 
 In the Calibrating and Released states, the background variations are tracked
 using an exponential decaying filter and stored in average $a$. In all other
@@ -329,8 +331,6 @@ properly, the difference of $x$ and $a$ is a measure for how close a user is to
 the sensor (in capacitive sensing mode) or for how much pressure a user applies
 to the sensor (in resistive sensing mode).
 
-FIXME: ADD REFERENCE TO STATE MACHINE 
-
 \section{Shielding}
 In capacitive sensing mode, the sensor is also sensitive on the underside. If
 the distance between the underside of the sensor and the human body is
@@ -343,12 +343,12 @@ sensor. Connecting this shield to ground effectively removes all of the
 capacitance variation but also reduces the sensitivity of the sensor. By
 connecting the sensor itself to the input of a 1 x opamp and the output of the
 opamp to the shield, the voltage of the shield is always very close to the
-voltage on the sensor itself. As a result, the electric field underneath the
-sensor is virtually zero and no sensitivity is lost. Note that for proper
-shielding, also the cable to the sensor should be shielded. A schematic diagram
-of this setup is shown in Figure \ref{fig:shield_circuit}.
+voltage on the sensor itself. This is similar to what Davison describes in
+\cite{Davison2013a}. As a result, the electric field underneath the sensor is
+virtually zero and no sensitivity is lost. Note that for proper shielding, also
+the cable to the sensor should be shielded. A schematic diagram
+is shown in Figure \ref{fig:shield_circuit}.
 
-FIXME: ADD REFERENCE TO SHIELDING
 
 % \begin{marginfigure}
 % \begin{minipage}{\marginparwidth}
@@ -384,7 +384,7 @@ he / she is approaching the button.
 % REFERENCES FORMAT
 % References must be the same font size as other body text.
 \bibliographystyle{SIGCHI-Reference-Format}
-\bibliography{sample}
+\bibliography{prepre}
 
 \end{document}
 
