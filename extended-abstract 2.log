@@ -550,4 +550,52 @@ Overfull \hbox (1.75533pt too wide) in paragraph at lines 100--100
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 6.43999pt on input line 100.
-LaTeX Font Info:    Try loading f
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 100.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 100.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 107.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 107.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 11.03998pt on input line 107.
+
+./extended-abstract 2.tex:136: Undefined control sequence.
+<argument> 0.9\marginpagewidth 
+                               
+l.136 ....9\marginpagewidth}}\label{sec:sidebar} }
+                                                  
+? 
+
+./extended-abstract 2.tex:136: Undefined control sequence.
+ ... LaTeX Error: Environment 0.9\marginpagewidth 
+                                                   undefined.
+
+See the LaTeX...
+l.136 ....9\marginpagewidth}}\label{sec:sidebar} }
+                                                  
+? 
+./extended-abstract 2.tex:136: Emergency stop.
+ ... LaTeX Error: Environment 0.9\marginpagewidth 
+                                                   undefined.
+
+See the LaTeX...
+l.136 ....9\marginpagewidth}}\label{sec:sidebar} }
+                                                  
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 8084 strings out of 493014
+ 124413 string characters out of 6133351
+ 203658 words of memory out of 5000000
+ 11526 multiletter control sequences out of 15000+600000
+ 19278 words of font info for 34 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 43i,6n,40p,792b,302s stack positions out of 5000i,500n,10000p,200000b,80000s
+./extended-abstract 2.tex:136:  ==> Fatal error occurred, no output PDF file pr
+oduced!

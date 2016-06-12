@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.11)  12 JUN 2016 09:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.11)  12 JUN 2016 10:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -410,48 +410,66 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@depth=\count106
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )))
-Package color Info: Redefining color linkColor on input line 67.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 81.
-Package hyperref Info: Option `colorlinks' set `true' on input line 81.
-Package hyperref Info: Option `breaklinks' set `true' on input line 81.
-
-(./extended-abstract.aux)
-\openout1 = `extended-abstract.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 85.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 85.
+<figures/sensor.png, id=1, 236.5638pt x 438.9198pt>
+File: figures/sensor.png Graphic file (type png)
+ <use figures/sensor.png>
+Package pdftex.def Info: figures/sensor.png used on input line 66.
+(pdftex.def)             Requested size: 117.07678pt x 217.22243pt.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 67.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 85.
+(Font)              scaled to size 8.27998pt on input line 67.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 67.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 8.27998pt on input line 67.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 68.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 68.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 69.
+
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+Package color Info: Redefining color linkColor on input line 74.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 88.
+Package hyperref Info: Option `colorlinks' set `true' on input line 88.
+Package hyperref Info: Option `breaklinks' set `true' on input line 88.
+(./extended-abstract.aux)
+\openout1 = `extended-abstract.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 92.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 92.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 85.
+LaTeX Info: Redefining \selectfont on input line 92.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -468,7 +486,7 @@ LaTeX Info: Redefining \selectfont on input line 85.
 \everyMPtoPDFconversion=\toks21
 )
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring ON on input line 85.
+Package hyperref Info: Link coloring ON on input line 92.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -477,9 +495,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count113
 )
-LaTeX Info: Redefining \ref on input line 85.
-LaTeX Info: Redefining \pageref on input line 85.
-LaTeX Info: Redefining \nameref on input line 85.
+LaTeX Info: Redefining \ref on input line 92.
+LaTeX Info: Redefining \pageref on input line 92.
+LaTeX Info: Redefining \nameref on input line 92.
 
 (./extended-abstract.out) (./extended-abstract.out)
 \@outlinefile=\write4
@@ -501,224 +519,212 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 87.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 94.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bc/n' will be
-(Font)              scaled to size 9.19998pt on input line 87.
+(Font)              scaled to size 9.19998pt on input line 94.
 LaTeX Font Info:    Font shape `OT1/phv/bc/n' will be
-(Font)              scaled to size 22.88956pt on input line 87.
+(Font)              scaled to size 22.88956pt on input line 94.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 87.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 94.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 22.88956pt on input line 87.
+(Font)              scaled to size 22.88956pt on input line 94.
 
-Overfull \hbox (12.7316pt too wide) in paragraph at lines 87--87
+Overfull \hbox (12.7316pt too wide) in paragraph at lines 94--94
 [][] 
  []
 
 
-Overfull \hbox (280.04623pt too wide) in paragraph at lines 87--87
+Overfull \hbox (280.04623pt too wide) in paragraph at lines 94--94
 [][][]  
  []
 
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 87.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 87.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.27998pt on input line 87.
 
-Overfull \hbox (1.75533pt too wide) in paragraph at lines 87--87
+Overfull \hbox (1.75533pt too wide) in paragraph at lines 94--94
 [][] [] 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 87.
-LaTeX Font Info:    Try loading font information for TS1+phv on input line 87.
+(Font)              scaled to size 6.43999pt on input line 94.
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 94.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 87.
+(Font)              scaled to size 6.43999pt on input line 94.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 94.
+(Font)              scaled to size 11.03998pt on input line 101.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 94.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 101.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.03998pt on input line 94.
- [1
+(Font)              scaled to size 11.03998pt on input line 101.
 
-
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<figures/workshop.png, id=76, 238.491pt x 722.7pt>
+<figures/workshop.png, id=69, 238.491pt x 722.7pt>
 File: figures/workshop.png Graphic file (type png)
  <use figures/workshop.png>
-Package pdftex.def Info: figures/workshop.png used on input line 111.
+Package pdftex.def Info: figures/workshop.png used on input line 119.
 (pdftex.def)             Requested size: 117.07678pt x 354.77672pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 112.
+(caption)                particular \caption on input line 120.
 See the caption package documentation for explanation.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 113.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 113.
-
-LaTeX Warning: Marginpar on page 2 moved.
+[1
 
 
-Overfull \hbox (3.06798pt too wide) in paragraph at lines 116--117
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figur
+es/sensor.png>]
+Overfull \hbox (3.06798pt too wide) in paragraph at lines 125--126
 \T1/phv/m/n/10 pac-i-tive touch sens-ing. He is a mem-ber of the TU/Eindhoven 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 119.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 128.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 9.19998pt on input line 119.
+(Font)              scaled to size 9.19998pt on input line 128.
 
-Overfull \hbox (2.99435pt too wide) in paragraph at lines 122--123
+Overfull \hbox (2.99435pt too wide) in paragraph at lines 131--132
 []\T1/phv/m/n/10 A low den-sity ESD Foam http://nl.farnell.com/multicomp/039- 
  []
 
 [2 <./figures/workshop.png>]
-Overfull \hbox (3.70601pt too wide) in paragraph at lines 153--157
+Overfull \hbox (3.70601pt too wide) in paragraph at lines 162--166
 \T1/phv/m/n/10 te-rial be-tween the plates (ap-prox-i-mately $\OT1/cmr/m/n/10 8
 \OML/cmm/m/it/10 :\OT1/cmr/m/n/10 85418 \OMS/cmsy/m/n/10 ^^A \OT1/cmr/m/n/10 10
 [] [][]$ 
  []
 
-<figures/resistive_sensor.png, id=94, 1142.2675pt x 685.56125pt>
+<figures/resistive_sensor.png, id=96, 1142.2675pt x 685.56125pt>
 File: figures/resistive_sensor.png Graphic file (type png)
 
 <use figures/resistive_sensor.png>
-Package pdftex.def Info: figures/resistive_sensor.png used on input line 161.
+Package pdftex.def Info: figures/resistive_sensor.png used on input line 170.
 (pdftex.def)             Requested size: 117.07678pt x 70.26524pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 164.
+(caption)                particular \caption on input line 173.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (11.845pt too wide) in paragraph at lines 173--176
+Overfull \hbox (11.845pt too wide) in paragraph at lines 182--185
 []\T1/phv/m/n/10 There are many dif-fer-ent meth-ods to mea-sure self-capacitan
 ce 
  []
 
 [3 <./figures/resistive_sensor.png>]
-<figures/cap_res_setup_res.png, id=113, 555.07375pt x 763.85374pt>
+<figures/cap_res_setup_res.png, id=115, 555.07375pt x 763.85374pt>
 File: figures/cap_res_setup_res.png Graphic file (type png)
 
 <use figures/cap_res_setup_res.png>
-Package pdftex.def Info: figures/cap_res_setup_res.png used on input line 215.
+Package pdftex.def Info: figures/cap_res_setup_res.png used on input line 224.
 (pdftex.def)             Requested size: 117.07678pt x 161.11334pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 218.
+(caption)                particular \caption on input line 227.
 See the caption package documentation for explanation.
 
-<figures/cap_res_setup_cap.png, id=114, 522.95375pt x 742.775pt>
+<figures/cap_res_setup_cap.png, id=116, 522.95375pt x 742.775pt>
 File: figures/cap_res_setup_cap.png Graphic file (type png)
 
 <use figures/cap_res_setup_cap.png>
-Package pdftex.def Info: figures/cap_res_setup_cap.png used on input line 225.
+Package pdftex.def Info: figures/cap_res_setup_cap.png used on input line 234.
 (pdftex.def)             Requested size: 117.07678pt x 166.2898pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 228.
+(caption)                particular \caption on input line 237.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Marginpar on page 4 moved.
 
 
-Overfull \hbox (12.7928pt too wide) in paragraph at lines 253--253
+Overfull \hbox (12.7928pt too wide) in paragraph at lines 262--262
 |\T1/phv/m/sl/10 Using Re-sis-tive Pres-sure Sen-sors as Ca-pac-i-tive Dis-tanc
 e Sen-
  []
 
 [4 <./figures/cap_res_setup_res.png> <./figures/cap_res_setup_cap.png>]
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 283.
+(Font)              scaled to size 9.19998pt on input line 292.
 
-<figures/state_machine.pdf, id=130, 597.23125pt x 845.1575pt>
+<figures/state_machine.pdf, id=132, 597.23125pt x 845.1575pt>
 File: figures/state_machine.pdf Graphic file (type pdf)
 
 <use figures/state_machine.pdf>
-Package pdftex.def Info: figures/state_machine.pdf used on input line 304.
+Package pdftex.def Info: figures/state_machine.pdf used on input line 313.
 (pdftex.def)             Requested size: 117.07678pt x 165.67552pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 306.
+(caption)                particular \caption on input line 315.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Marginpar on page 5 moved.
 
 [5 <./figures/state_machine.pdf>]
-<figures/shield_circuit.png, id=146, 1953.2975pt x 1110.1475pt>
+<figures/shield_circuit.png, id=148, 1953.2975pt x 1110.1475pt>
 File: figures/shield_circuit.png Graphic file (type png)
 
 <use figures/shield_circuit.png>
-Package pdftex.def Info: figures/shield_circuit.png used on input line 352.
+Package pdftex.def Info: figures/shield_circuit.png used on input line 361.
 (pdftex.def)             Requested size: 117.07678pt x 66.53821pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 354.
+(caption)                particular \caption on input line 363.
 See the caption package documentation for explanation.
 
-<figures/stackup.png, id=148, 2174.1225pt x 922.44624pt>
+<figures/stackup.png, id=150, 2174.1225pt x 922.44624pt>
 File: figures/stackup.png Graphic file (type png)
 
 <use figures/stackup.png>
-Package pdftex.def Info: figures/stackup.png used on input line 369.
+Package pdftex.def Info: figures/stackup.png used on input line 378.
 (pdftex.def)             Requested size: 117.07678pt x 49.672pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 371.
+(caption)                particular \caption on input line 380.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Marginpar on page 6 moved.
 
 No file extended-abstract.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 400.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 409.
 
 Package balance Warning: You have called \balance in second column
 (balance)                Columns might not be balanced.
 
 [6 <./figures/shield_circuit.png> <./figures/stackup.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 400.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 409.
 
 (./extended-abstract.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 400.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 400.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 409.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 409.
 Package rerunfilecheck Info: File `extended-abstract.out' has not changed.
 (rerunfilecheck)             Checksum: 2D887A81E197FCED54EE8488EB4B655D;1005.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 400.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 409.
  ) 
 Here is how much of TeX's memory you used:
- 8175 strings out of 493014
- 125746 string characters out of 6133351
- 205536 words of memory out of 5000000
- 11551 multiletter control sequences out of 15000+600000
- 26618 words of font info for 34 fonts, out of 8000000 for 9000
+ 8184 strings out of 493014
+ 125887 string characters out of 6133351
+ 207040 words of memory out of 5000000
+ 11557 multiletter control sequences out of 15000+600000
+ 27383 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,8n,77p,1173b,438s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,8n,77p,1173b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
 live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texl
@@ -730,10 +736,10 @@ e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
 exmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-di
 st/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/font
 s/type1/urw/helvetic/uhvro8a.pfb>
-Output written on extended-abstract.pdf (6 pages, 1765928 bytes).
+Output written on extended-abstract.pdf (6 pages, 2470929 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
- 51 named destinations out of 1000 (max. 500000)
- 164 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 208 PDF objects out of 1000 (max. 8388607)
+ 173 compressed objects within 2 object streams
+ 52 named destinations out of 1000 (max. 500000)
+ 169 words of extra memory for PDF output out of 10000 (max. 10000000)
 
