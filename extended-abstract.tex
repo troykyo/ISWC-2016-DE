@@ -64,7 +64,7 @@
 \begin{minipage}{\marginparwidth}
 \centering
 \includegraphics[width=0.9\columnwidth]{figures/sensor}
- \caption{PrePre sensor prototipe.}~\label{fig:sensor}
+ \caption{PrePre sensor prototype.}~\label{fig:sensor}
 \end{minipage}
 \end{marginfigure}
 
@@ -167,10 +167,10 @@ in Figure \ref{fig:pressure_sensor}.
 Capacitive sensors are popular sensors in embedded computing due to their low cost
 and capabilities of detecting approaching human body parts, which allows the
 object to give feedback to the user even before the user is physically touching
-the object. The physics behind sensors that meaure self-capacitance is that one
+the object. The physics behind sensors that measure self-capacitance is that one
 plate of the capacitor is formed by the sensor and the other plate is formed by
-nearby grounded objects. The capacitance is a function of area and distance, as
-shown by the well-known parallel plate model
+nearby grounded objects such as humans. The capacitance is a function of area
+and distance, as shown by the well-known parallel plate model
 
 \begin{equation}
 C = {{\varepsilon A} \over {d}}
@@ -181,15 +181,17 @@ between the plates (approximately $8.85418 \cdot 10^{-12} ~ \textrm{F/m}$ for
 air), $A$ is the overlapping area of the plates and $d$ is the distance between
 the plates.
 
-\begin{marginfigure}
-\begin{minipage}{\marginparwidth}
+% \begin{marginfigure}
+% \begin{minipage}{\marginparwidth}
+\begin{figure}
 \centering
 \includegraphics[width=0.9\columnwidth]{figures/resistive_sensor}
  \caption{Conceptual model of a pressure sensor. Compressing the sensor causes
   partial short-circuits which lowers the overall resistance of the
   structure.}~\label{fig:pressure_sensor}
-\end{minipage}
-\end{marginfigure}
+\end{figure}
+% \end{minipage}
+% \end{marginfigure}
 
 
 For many use cases of capacitive touch, the permittivity and area do not change
@@ -209,8 +211,8 @@ ADD REFERENCE
 An intrinsic feature of capacitive touch sensors is that the
 electric field needs to fringe out of the object to be able to sense the human
 body and due to this fringing, the electric field is also easily disturbed by
-other electric fields or nearby grounded objects such as 110 / 230 V wires or
-devices or metal structures. The slow measurement method of the R-C charge
+other electric fields or nearby grounded objects such as 110 / 230 V wires,
+electronic devices or metal structures. The slow measurement method of the R-C charge
 method makes it more difficult to filter out these disturbances, leading to poor
 performance of the sensor and poor experiences of capacitive touch for users of
 the objects which use this method.
@@ -260,7 +262,7 @@ capacitance will result in a lower voltage on the sensor and the last step of
 this method is to measure this voltage using the usual ADC functions.
 
 Since this method does not rely on R-C discharge times but uses the internal and
-usually much faster ADC, more filtering can be applied to the signal to remove
+usually much faster and higher resolution ADC, more filtering can be applied to the signal to remove
 disturbance of other nearby objects and electronic devices. This results in a
 superior performance and a better user experience.
 
@@ -283,9 +285,9 @@ connected to the analog input. The bottom electrode is connected to a pin that
 is configured as digital input, which effectively means that the sensor is
 floating. This is exactly the setup that is needed for the CVD method.
 
-Since the ADC in moden microcontrollers is very fast (typically 1 million
-samples per second or more), the microcontroller can rapidly switch between the
-resistive sensing and capacitive sensing mode and use the same sensor for both
+Since the ADC in modern microcontrollers is very fast (typically 1 million
+samples per second or more), the microcontroller can rapidly switch between
+resistive sensing and capacitive sensing modes and use the same sensor for both
 resisitive pressure sensing and capacitive presence sensing.
 
 \section{Software Features}
@@ -309,14 +311,16 @@ than $P$ counts below the average, the state is changed back to Released. If
 however the next $C$ measurements are all more than $P$ counts below this
 average, the state is changed to Pressed.
 
-\begin{marginfigure}
-\begin{minipage}{\marginparwidth}
+% \begin{marginfigure}
+% \begin{minipage}{\marginparwidth}
+\begin{figure}
 \centering
-\includegraphics[width=0.9\columnwidth]{figures/state_machine}
+\includegraphics[trim={0 6.2cm 0 6.8cm},clip,width=0.9\columnwidth]{figures/state_machine}
  \caption{State machine for resistive and capacitive measurements to track
 background variations.}~\label{fig:state_machine}
-\end{minipage}
-\end{marginfigure}
+\end{figure}
+% \end{minipage}
+% \end{marginfigure}
 
 Similarly the state moves from the Pressed state to the Pressed to Released
 state and from Pressed to Released to the Released state.
@@ -336,46 +340,41 @@ to the sensor (in resistive sensing mode).
 %FIXME: ADD REFERENCE TO STATE MACHINE 
 
 \section{Shielding}
-In capacitive sensing mode, the bottom electrode of the resistive pressure
-sensor is floating. In this mode the pressure sensitive resistive material in
-between can be seen effectively as a conductor and thus the whole sensor can be
-seen as just a single electrode. The electric field of the sensor will therefore
-also fringe all around the sensor, including the bottom side. As the electric
-field is also present at the underside of the sensor, the sensor is not only
-sensitive for the presence of human body parts above the sensor, but also below.
-If the capacitance underneath the sensor is relatively constant, tuning of the
-state machine could be sufficient to filter this out and make the sensor only
-sensitive to large and / or rapid variations.
+In capacitive sensing mode, the sensor is also sensitive on the underside. If
+the distance between the underside of the sensor and the human body is
+relatively constant, tuning of the state machine could be sufficient to filter
+this out and make the sensor only sensitive to large and / or rapid variations.
 
-However, for some applications such as lose fitting clothing, this might 
-not be sufficient. In such cases, the sensor can be made less sensitive by
-adding a shield underneath the sensor. Connecting this shield to ground
-effectively removes all of the capacitance variation but also reduces the
-sensitivity of the sensor. By connecting the sensor itself to the input of a 1 x
-opamp and the output of the opamp to the shield, the voltage of the shield is
-always very close to the voltage on the sensor itself. As a result, the electric
-field underneath the sensor is virtually zero and no sensitivity is lost. Note
-that for proper shielding, also the cable to the sensor should be shielded. A
-schematic diagram of this setup is shown in Figure \ref{fig:shield_circuit}.
+However, some applications such as lose fitting clothing require more filtering
+and benefit from a shield underneath the
+sensor. Connecting this shield to ground effectively removes all of the
+capacitance variation but also reduces the sensitivity of the sensor. By
+connecting the sensor itself to the input of a 1 x opamp and the output of the
+opamp to the shield, the voltage of the shield is always very close to the
+voltage on the sensor itself. As a result, the electric field underneath the
+sensor is virtually zero and no sensitivity is lost. Note that for proper
+shielding, also the cable to the sensor should be shielded. A schematic diagram
+of this setup is shown in Figure \ref{fig:shield_circuit}.
 
 %FIXME: ADD REFERENCE TO SHIELDING
 
-\begin{marginfigure}
-\begin{minipage}{\marginparwidth}
+% \begin{marginfigure}
+% \begin{minipage}{\marginparwidth}
+\begin{figure}
 \centering
 \includegraphics[width=0.9\columnwidth]{figures/shield_circuit}
   \caption{Circuit to shield underside of capacitive
 sensor.}~\label{fig:shield_circuit}
-\end{minipage}
-\end{marginfigure}
+\end{figure}
+% \end{minipage}
+% \end{marginfigure}
 
-\section{Mechanical Features}
-An overview of the stackup of the total sensor is shown in Figure
-\ref{fig:stackup}. In this figure, the electrode and shield material can be
-conductive textile, the insulating material can be any non-compressable
-insulating material (for example cotton) and the pressure sensitive material can
-be Velostat or ESD foam.
-
+% \section{Mechanical Features}
+% An overview of the stackup of the total sensor is shown in Figure
+% \ref{fig:stackup}. In this figure, the electrode and shield material can be
+% conductive textile, the insulating material can be any non-compressable
+% insulating material (for example cotton) and the pressure sensitive material can
+% be Velostat or ESD foam.
 
 
 \section{Conclusion}
