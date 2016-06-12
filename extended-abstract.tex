@@ -161,29 +161,9 @@ non-linear elastic deformations. The partial short-circuits result in a lower
 overall resistance of the structure. This is visualized
 in Figure \ref{fig:pressure_sensor}.
 
-
-
-\subsection{Capacitive Touch / Distance Sensors}
-Capacitive sensors are popular sensors in embedded computing due to their low cost
-and capabilities of detecting approaching human body parts, which allows the
-object to give feedback to the user even before the user is physically touching
-the object. The physics behind sensors that measure self-capacitance is that one
-plate of the capacitor is formed by the sensor and the other plate is formed by
-nearby grounded objects such as humans. The capacitance is a function of area
-and distance, as shown by the well-known parallel plate model
-
-\begin{equation}
-C = {{\varepsilon A} \over {d}}
-\end{equation}
-
-where $C$ is the capacitance, $\varepsilon$ is the permittivity of the material
-between the plates (approximately $8.85418 \cdot 10^{-12} ~ \textrm{F/m}$ for
-air), $A$ is the overlapping area of the plates and $d$ is the distance between
-the plates.
-
 % \begin{marginfigure}
 % \begin{minipage}{\marginparwidth}
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\columnwidth]{figures/resistive_sensor}
  \caption{Conceptual model of a pressure sensor. Compressing the sensor causes
@@ -192,6 +172,18 @@ the plates.
 \end{figure}
 % \end{minipage}
 % \end{marginfigure}
+
+
+
+\subsection{Capacitive Touch / Distance Sensors}
+Capacitive sensors are popular sensors in embedded computing due to their low cost
+and capabilities of detecting approaching human body parts, which allows the
+object to give feedback to the user even before the user is physically touching
+the object. The parallel plate capacitor model provides a good intuition to the
+physics behind sensors that measure self-capacitance. In this model one plate of
+the capacitor is formed by the sensor and the other plate is formed by
+nearby grounded objects such as humans. According to the model, the capacitance is a function of area
+and distance.
 
 
 For many use cases of capacitive touch, the permittivity and area do not change
@@ -225,6 +217,34 @@ but instead relies on charge distribution between the sample and hold capacitor
 of an ADC ($\textrm{C}_{\textrm{S\&H}}$) and the capacitive sensor. This method
 is called Capacitive Voltage Division (CVD).
 
+In this method, no external resistor is required and the sensor plate is
+directly connected to an analog input pin. The microcontroller starts a
+measurement by configuring this pin as a digital output and making this output low,
+thereby discharging the sensor. Next, the microcontroller connects the internal
+ADC to its supply voltage, which charges $\textrm{C}_{\textrm{S\&H}}$ to a fixed
+amount of charge which depends only on the capacitance
+$\textrm{C}_{\textrm{S\&H}}$ and the supply voltage.
+
+Afther the sensor pin is discharged and $\textrm{C}_{\textrm{S\&H}}$ is
+charged, the sensor pin needs to be reconfigured as analog input and the
+multiplexer of the ADC needs to be switched to this input. This will
+redistribute the charge on $\textrm{C}_{\textrm{S\&H}}$ over both
+$\textrm{C}_{\textrm{S\&H}}$ and the capacitance of the sensor. A larger sensor
+capacitance will result in a lower voltage on the sensor and the last step of
+this method is to measure this voltage using the usual ADC functions.
+
+Since this method does not rely on R-C discharge times but uses 
+a much faster and higher resolution ADC, more filtering can be applied to the signal to remove
+disturbance of other nearby objects and electronic devices. This results in
+superior performance and better user experience.
+
+\subsection{Using Resistive Pressure Sensors as Capacitive Distance Sensors}
+The CVD method connects the sensor directly to the analog input of a
+microcontroller, similar to the resistive sensor setup. The resistive sensor can
+now be used to also measure capacitance by connecting the other electrode of the
+sensor to a GPIO pin instead of ground. This setup is shown in Figures
+\ref{fig:cap_res_setup_res} and \ref{fig:cap_res_setup_cap}.
+
 \begin{marginfigure}
 \begin{minipage}{\marginparwidth}
 \centering
@@ -244,34 +264,6 @@ capacitive sensing mode. Grey items are internal to the
 microcontroller.}~\label{fig:cap_res_setup_cap}
 \end{minipage}
 \end{marginfigure}
-
-In this method, no external resistor is required and the sensor plate is
-directly connected to an analog input pin. The microcontroller starts a
-measurement by configuring this pin as a digital output and making this output low,
-thereby discharging the sensor. Next, the microcontroller connects the internal
-ADC to its supply voltage, which charges $\textrm{C}_{\textrm{S\&H}}$ to a fixed
-amount of charge which depends only on the capacitance
-$\textrm{C}_{\textrm{S\&H}}$ and the supply voltage.
-
-Afther the sensor pin is discharged and $\textrm{C}_{\textrm{S\&H}}$ is
-charged, the sensor pin needs to be reconfigured as analog input and the
-multiplexer of the ADC needs to be switched to this input. This will
-redistribute the charge on $\textrm{C}_{\textrm{S\&H}}$ over both
-$\textrm{C}_{\textrm{S\&H}}$ and the capacitance of the sensor. A larger sensor
-capacitance will result in a lower voltage on the sensor and the last step of
-this method is to measure this voltage using the usual ADC functions.
-
-Since this method does not rely on R-C discharge times but uses the internal and
-usually much faster and higher resolution ADC, more filtering can be applied to the signal to remove
-disturbance of other nearby objects and electronic devices. This results in a
-superior performance and a better user experience.
-
-\subsection{Using Resistive Pressure Sensors as Capacitive Distance Sensors}
-The CVD method connects the sensor directly to the analog input of a
-microcontroller, similar to the resistive sensor setup. The resistive sensor can
-now be used to also measure capacitance by connecting the other electrode of the
-sensor to a GPIO pin instead of ground. This setup is shown in Figures
-\ref{fig:cap_res_setup_res} and \ref{fig:cap_res_setup_cap}.
 
 Figure \ref{fig:cap_res_setup_res} shows the setup in resistive sensing mode,
 which is a standard resitive divider setup using an internal pull resistor
