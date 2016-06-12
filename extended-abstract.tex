@@ -50,14 +50,24 @@
 % strictly adhere to this author notation.
 \author{%
   \alignauthor{%
-    \textbf{Troy Nachtigall}\\
-    \affaddr{Eindhoven Univsersity of Technology} \\
-    \affaddr{Eindhoven,  5400MB, NL} \\
-    \email{t.r.nachtigall@tue.nl} }
+    \textbf{First Author}\\
+  	\affaddr{AuthorCo, Inc.}\\
+  	\affaddr{123 Author Ave.}\\
+  	\affaddr{Authortown, PA 54321 USA}\\
+  	\email{author1@anotherco.com}}
+    %\textbf{Troy Nachtigall}\\
+    %\affaddr{Eindhoven Univsersity of Technology} \\
+    %\affaddr{Eindhoven,  5400MB, NL} \\
+    %\email{t.r.nachtigall@tue.nl} }
     \alignauthor{%
-    \textbf{A.M.J.M. Schoonen}\\
-    \affaddr{Eindhoven, The Netherlands}\\
-    \email{admar@familieschoonen.nl} } 
+    \textbf{Second Author}\\
+  	\affaddr{AuthorCo, Inc.}\\
+  	\affaddr{123 Author Ave.}\\
+  	\affaddr{Authortown, PA 54321 USA}\\
+  	\email{author2@anotherco.com}}
+    %\textbf{A.M.J.M. Schoonen}\\
+    %\affaddr{Eindhoven, The Netherlands}\\
+    %\email{admar@familieschoonen.nl} } 
     }
 
 
@@ -183,6 +193,10 @@ combination is measured. Since the resistor is fixed value, this is a measure
 for the value of the capacitor. A detailed description can be found in
 \cite{ST2009}.
 
+
+
+An intrinsic feature of capacitive touch sensors is that the electric field needs to fringe out of the object to be able to sense the human body. Due to this fringing, the electric field is also easily disturbed by other electric fields or nearby grounded objects such as power lines, electronic devices or metal structures. The slow measurement method of the RC charge makes it more difficult to filter out these disturbances, leading to poor performance of the sensor and poor experiences of capacitive touch for users of the objects. 
+
 \begin{marginfigure}
 \begin{minipage}{\marginparwidth}
 \centering
@@ -202,9 +216,6 @@ capacitive sensing mode. Grey items are internal to the
 microcontroller.}~\label{fig:cap_res_setup_cap}
 \end{minipage}
 \end{marginfigure}
-
-An intrinsic feature of capacitive touch sensors is that the electric field needs to fringe out of the object to be able to sense the human body. Due to this fringing, the electric field is also easily disturbed by other electric fields or nearby grounded objects such as power lines, electronic devices or metal structures. The slow measurement method of the RC charge makes it more difficult to filter out these disturbances, leading to poor performance of the sensor and poor experiences of capacitive touch for users of the objects. 
-
 
 
 \subsubsection{CVD Method}
@@ -291,6 +302,17 @@ the distance between the underside of the sensor and the human body is
 relatively constant, tuning could be sufficient to filter
 this out and make the sensor only sensitive to large and / or rapid variations.
 
+% \begin{marginfigure}
+% \begin{minipage}{\marginparwidth}
+\begin{figure}
+\centering
+\includegraphics[width=0.9\columnwidth]{figures/shield_circuit}
+  \caption{Circuit to shield underside of capacitive
+sensor.}~\label{fig:shield_circuit}
+\end{figure}
+% \end{minipage}
+% \end{marginfigure}
+
 However, some applications such as lose fitting clothing require more filtering
 and benefit from a shield underneath the
 sensor. Connecting this shield to ground effectively removes all of the
@@ -304,16 +326,7 @@ the cable to the sensor should be shielded. A schematic diagram
 is shown in Figure \ref{fig:shield_circuit}.
 
 
-% \begin{marginfigure}
-% \begin{minipage}{\marginparwidth}
-\begin{figure}
-\centering
-\includegraphics[width=0.9\columnwidth]{figures/shield_circuit}
-  \caption{Circuit to shield underside of capacitive
-sensor.}~\label{fig:shield_circuit}
-\end{figure}
-% \end{minipage}
-% \end{marginfigure}
+
 
 % \section{Mechanical Features}
 % An overview of the stackup of the total sensor is shown in Figure
