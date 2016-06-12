@@ -246,7 +246,7 @@ ADC to its supply voltage, which charges $\textrm{C}_{\textrm{S\&H}}$ to a fixed
 amount of charge which depends only on the capacitance
 $\textrm{C}_{\textrm{S\&H}}$ and the supply voltage.
 
-Afther the sensor pin is discharged and $\textrm{C}_{\textrm{S\&H}}$ is
+After the sensor pin is discharged and $\textrm{C}_{\textrm{S\&H}}$ is
 charged, the sensor pin needs to be reconfigured as analog input and the
 multiplexer of the ADC needs to be switched to this input. This will
 redistribute the charge on $\textrm{C}_{\textrm{S\&H}}$ over both
@@ -328,7 +328,7 @@ it is changed to the Calibrating state and the sensor will start recalibrating.
 By changing the parameters $N$, $C$, $P$ and $R$ the amount of filtering and
 speed of detection can be tuned to the application.
 
-FIXME: ADD REFERENCE TO STATE MACHINE 
+%FIXME: ADD REFERENCE TO STATE MACHINE 
 
 \section{Shielding}
 In capacitive sensing mode, the bottom electrode of the resistive pressure
@@ -353,7 +353,7 @@ field underneath the sensor is virtually zero and no sensitivity is lost. Note
 that for proper shielding, also the cable to the sensor should be shielded. A
 schematic diagram is shown in Figure \ref{fig:shield_circuit}.
 
-FIXME: ADD REFERENCE TO SHIELDING
+%FIXME: ADD REFERENCE TO SHIELDING
 
 \begin{marginfigure}
 \begin{minipage}{\marginparwidth}
@@ -390,15 +390,12 @@ shield}~\label{fig:stackup}
 
 
 \section{Conclusion}
-In this paper we have described the combination of capacitive distance sensing
-using the CVD method for presence sensing with resistive sensing for pressure
+The possibilities of a reliable, textile, soft presence and pressure sensor are numerous.  This reliability was detailed in the combination of capacitive distance sensing using the CVD method for presence sensing with resistive sensing for pressure
 sensing. The robustness of the CVD method as well as the required circuit and
-microcontroller features make it ideal to combine with existing resistive
-pressure sensing applications to enhance the user experience by not only sensing
-how hard a user presses on a button but already giving feedback to the user when
-he / she is approaching the button.
+microcontroller features make it ideal to combine with existing resistive pressure sensing applications to enhance the user experience by not only sensing how hard a user presses on a button but already giving feedback to the user when approaching the button. The choice of textiles increases the reliability and performance of the sensor in their specific contexts. In the use of a shoes we can understand not only how hard the foot is being pressed, but if the foot is disconnecting from the shoe.  In garments we can understand how multiple people approach and touch each other in performance or everyday activities. In the context of a automative steering wheel we can understand not only where someone is touching, but how they move there hands when engaged in an maneuver such as turning a corner.
+The use of multiple sensors for greater movement vector and specific specific touch location sensing is a serious possibility that the authors intend to explore further.  
 \section{Acknowledgements}
-
+The authors would like to thank the Wearable Senses Lab, /dSearch Lab and E-Labs along with the Designing Quality in Interaction group of the Industrial Design department of the Eindhoven University of Technology. Support for this project also comes from the Marie Curie Horizon 2020 Action ArcInTexETN. Special thanks to Dr. Oscar Tomico and Dr. Stephan Wensveen of TU Eindhoven.
 % BALANCE COLUMNS
 \balance{} 
 % REFERENCES FORMAT
