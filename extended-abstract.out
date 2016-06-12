@@ -1,16 +1,15 @@
-\BOOKMARK [1][-]{section*.5}{Introduction}{}% 1
-\BOOKMARK [1][-]{section*.7}{Design}{}% 2
-\BOOKMARK [2][-]{subsection*.9}{Design Concept}{section*.7}% 3
-\BOOKMARK [2][-]{subsection*.11}{Textiles}{section*.7}% 4
-\BOOKMARK [2][-]{subsection*.14}{Relevancy}{section*.7}% 5
-\BOOKMARK [1][-]{section*.16}{Technical Aspects}{}% 6
-\BOOKMARK [2][-]{subsection*.18}{Resistive Pressure Sensors}{section*.16}% 7
-\BOOKMARK [2][-]{subsection*.20}{Capacitive Touch / Distance Sensors}{section*.16}% 8
-\BOOKMARK [3][-]{subsubsection*.22}{R-C Charge Method}{subsection*.20}% 9
+\BOOKMARK [1][-]{section*.4}{Introduction}{}% 1
+\BOOKMARK [1][-]{section*.6}{Design}{}% 2
+\BOOKMARK [2][-]{subsection*.8}{Design Concept}{section*.6}% 3
+\BOOKMARK [2][-]{subsection*.10}{Relevancy}{section*.6}% 4
+\BOOKMARK [2][-]{subsection*.12}{Textiles}{section*.6}% 5
+\BOOKMARK [1][-]{section*.15}{Technical Aspects}{}% 6
+\BOOKMARK [2][-]{subsection*.17}{Resistive Pressure Sensors}{section*.15}% 7
+\BOOKMARK [2][-]{subsection*.20}{Capacitive Touch / Distance Sensors}{section*.15}% 8
+\BOOKMARK [3][-]{subsubsection*.22}{RC Charge Method}{subsection*.20}% 9
 \BOOKMARK [3][-]{subsubsection*.24}{CVD Method}{subsection*.20}% 10
-\BOOKMARK [2][-]{subsection*.26}{Using Resistive Pressure Sensors as Capacitive Distance Sensors}{section*.16}% 11
+\BOOKMARK [2][-]{subsection*.26}{Resistive Pressure Sensor as Capacitive Distance Sensor}{section*.15}% 11
 \BOOKMARK [1][-]{section*.28}{Software Features}{}% 12
-\BOOKMARK [1][-]{section*.30}{Shielding}{}% 13
-\BOOKMARK [1][-]{section*.32}{Mechanical Features}{}% 14
-\BOOKMARK [1][-]{section*.34}{Conclusion}{}% 15
-\BOOKMARK [1][-]{section*.36}{Acknowledgements}{}% 16
+\BOOKMARK [1][-]{section*.31}{Shielding}{}% 13
+\BOOKMARK [1][-]{section*.34}{Conclusion}{}% 14
+\BOOKMARK [1][-]{section*.36}{Acknowledgements}{}% 15
